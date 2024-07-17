@@ -14,34 +14,46 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 /* Container for main content */
 .container {
     display: flex;
-    max-width: 1200px;
-    margin: 20px;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    max-width: none;
+    margin: 0;
     background: var(--bg-secondary);
     backdrop-filter: blur(20px);
-    border-radius: 20px;
+    border-radius: 0;
     overflow: hidden;
 }
 
 /* Sidebar styles */
 .sidebar {
-    width: 250px;
+    width: 100%;
     padding: 30px 20px;
     background: rgba(44, 44, 46, 0.4);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
 }
 .sidebar h1 {
     margin-bottom: 10px;
@@ -54,6 +66,7 @@ body {
 }
 .sidebar nav ul {
     list-style-type: none;
+    padding: 0;
 }
 .sidebar nav ul li {
     margin-bottom: 10px;
@@ -76,7 +89,7 @@ body {
     flex: 1;
     padding: 30px;
     overflow-y: auto;
-    max-height: 80vh;
+    height: calc(100% - 60px); /* Adjust based on the sidebar height */
 }
 
 /* Section styles */
@@ -107,7 +120,7 @@ body {
     font-weight: 500;
 }
 .experience-item p {
-    color: var(--text-secondary);
+    color: var (--text-secondary);
 }
 
 /* Skills list */
@@ -149,4 +162,24 @@ footer {
     padding: 20px;
     color: var(--text-secondary);
     font-size: 0.9em;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        height: 100vh;
+    }
+    .sidebar {
+        width: 250px;
+        border-bottom: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: left;
+    }
+    .main-content {
+        flex: 1;
+        padding: 30px;
+        overflow-y: auto;
+        height: 100vh;
+    }
 }
