@@ -91,6 +91,39 @@ ul li::before {
     margin-left: -1em;
 }
 
+.project-demo {
+    margin: 1rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-demo iframe {
+    border: none;
+    display: block;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project-links a {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-links a:hover {
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+}
+
 footer {
     text-align: center;
     color: var(--text-secondary);
