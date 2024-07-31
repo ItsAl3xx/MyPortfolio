@@ -1,3 +1,4 @@
+/* Define color variables */
 :root {
     --bg-primary: #0f172a;
     --text-primary: rgba(255, 255, 255, 0.9);
@@ -6,13 +7,14 @@
     --hover-bg: rgba(255, 255, 255, 0.05);
 }
 
-
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Set basic body styles */
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: var(--bg-primary);
@@ -20,7 +22,7 @@ body {
     line-height: 1.6;
 }
 
-/* Social media sidebar styles */
+/* Style the social media sidebar */
 .social-sidebar {
     position: fixed;
     top: 50%;
@@ -48,46 +50,49 @@ body {
     height: 100%;
 }
 
-/* Main content styles */
+
+/* Style the main content container */
 .container {
-    max-width: 1000px; /* Increased max-width for larger header */
+    max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
     padding-left: calc(2rem + 60px);
 }
 
+/* Style the header */
 header {
-    margin-bottom: 4rem; /* Increased bottom margin */
-    text-align: center; /* Center align header content */
-    padding: 3rem 0; /* Add vertical padding to header */
+    margin-bottom: 4rem;
+    text-align: center;
+    padding: 3rem 0;
 }
 
 h1 {
-    font-size: 4rem; /* Increased font size */
-    margin-bottom: 1rem; /* Increased bottom margin */
+    font-size: 4rem;
+    margin-bottom: 1rem;
     color: var(--text-primary);
 }
 
 .subtitle {
     color: var(--text-secondary);
-    margin-bottom: 2rem; /* Increased bottom margin */
-    font-size: 1.5rem; /* Increased font size */
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
 }
 
+/* Style the navigation */
 nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: center; /* Center align navigation items */
-    gap: 2rem; /* Increased gap between nav items */
+    justify-content: center;
+    gap: 2rem;
 }
 
 nav a {
     color: var(--text-primary);
     text-decoration: none;
-    padding: 0.5rem 1rem; /* Added horizontal padding */
+    padding: 0.5rem 1rem;
     transition: color 0.3s ease, background-color 0.3s ease;
-    font-size: 1.2rem; /* Increased font size */
-    border-radius: 4px; /* Added border radius for hover effect */
+    font-size: 1.2rem;
+    border-radius: 4px;
 }
 
 nav a:hover {
@@ -95,8 +100,16 @@ nav a:hover {
     background-color: var(--hover-bg);
 }
 
+/* Style sections */
 section {
     margin-bottom: 3rem;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+section:hover {
+    background-color: var(--hover-bg);
 }
 
 h2 {
@@ -120,6 +133,7 @@ p {
     font-weight: 600;
 }
 
+/* Style lists */
 ul {
     list-style-type: none;
     padding-left: 1rem;
@@ -134,14 +148,41 @@ ul li::before {
     margin-left: -1em;
 }
 
+/* Style job entries */
 .job {
     margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+}
+
+.job:hover {
+    background-color: var(--hover-bg);
 }
 
 .job-details {
     margin-bottom: 0.5rem;
 }
 
+/* Style technology tags */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Style project demo */
 .project-demo {
     margin: 1rem 0;
     border-radius: 8px;
@@ -154,6 +195,7 @@ ul li::before {
     display: block;
 }
 
+/* Style project links */
 .project-links {
     display: flex;
     gap: 1rem;
@@ -175,25 +217,14 @@ ul li::before {
     color: var(--bg-primary);
 }
 
-/* Add hover effect for sections */
-section {
-    margin-bottom: 3rem;
-    padding: 1rem;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
-
-section:hover {
-    background-color: var(--hover-bg);
-}
-
+/* Style footer */
 footer {
     text-align: center;
     color: var(--text-secondary);
     margin-top: 2rem;
 }
 
-/* Media query for responsive design */
+/* Responsive design for mobile devices */
 @media (max-width: 768px) {
     .social-sidebar {
         position: static;
@@ -202,23 +233,4 @@ footer {
         margin-bottom: 20px;
         transform: none;
     }
-
-    .container {
-        padding: 1rem;
-    }
-
-    h1 {
-        font-size: 3rem; /* Slightly smaller font size for mobile */
-    }
-
-    .subtitle {
-        font-size: 1.2rem; /* Slightly smaller font size for mobile */
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack nav items vertically on mobile */
-        align-items: center;
-        gap: 1rem;
-    }
 }
-
