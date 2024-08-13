@@ -160,61 +160,92 @@ ul li::before {
     font-weight: 600;
 }
 
-/* Style project demo */
-.project-demo {
-    margin: 1rem 0;
+/* Projects section styles */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--hover-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-link {
+    font-size: 1.2rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.project-content {
+    display: flex;
+    gap: 2rem;
+}
+
+.project-image {
+    flex: 0 0 200px;
+    background-color: #1a2332;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.project-demo iframe {
-    border: none;
-    display: block;
-    width: 100%;
-    height: 500px;
+.project-image img {
+    max-width: 100%;
+    height: auto;
 }
 
-/* Style project links */
-.project-links {
+.project-details {
+    flex: 1;
+}
+
+.project-details p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.project-tags {
     display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
-.project-links a {
-    display: inline-block;
+.project-tag {
     background-color: var(--accent);
     color: var(--bg-primary);
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 0.7rem;
     border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
-.project-links a:hover {
-    background-color: var(--text-primary);
-    color: var(--bg-primary);
-}
-
-/* Style footer */
-footer {
-    text-align: center;
-    color: var(--text-secondary);
-    margin-top: 2rem;
-}
-
-/* Responsive design for mobile devices */
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
-    .social-sidebar {
-        position: static;
-        flex-direction: row;
-        justify-content: center;
-        margin-bottom: 20px;
-        transform: none;
+    .project-content {
+        flex-direction: column;
     }
-    
-    .project-demo iframe {
-        height: 300px;
+
+    .project-image {
+        flex: 0 0 auto;
+        height: 200px;
     }
 }
