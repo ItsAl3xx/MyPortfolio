@@ -168,7 +168,7 @@ ul li::before {
 }
 
 .project-card {
-    background-color: var(--hover-bg);
+    background-color: transparent; /* Remove the background color */
     border-radius: 8px;
     padding: 1.5rem;
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -176,8 +176,9 @@ ul li::before {
 
 .project-card:hover {
     transform: translateY(-5px);
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--hover-bg); /* Add background color on hover */
 }
+
 
 .project-card h3 {
     font-size: 1.8rem;
