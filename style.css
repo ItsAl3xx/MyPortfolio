@@ -266,22 +266,21 @@ ul li::before {
 /* Footer styles */
 
 footer {
-    background-color: rgba(15, 23, 42, 0.8);
-    backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
+    color: var(--text-secondary);
     padding: 2rem 0;
-    margin-top: 4rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-content {
-    max-width: 1000px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
-    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .footer-info p {
@@ -297,13 +296,12 @@ footer {
 
 .footer-nav {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .footer-nav a {
     color: var(--text-secondary);
     text-decoration: none;
-    font-size: 0.9rem;
     transition: color 0.3s ease;
 }
 
@@ -323,6 +321,12 @@ footer {
 
 .footer-social a:hover {
     color: var(--accent);
+}
+
+.footer-social svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
 }
 
 @media (max-width: 768px) {
