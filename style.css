@@ -387,6 +387,11 @@ footer {
     padding: 2rem 0;
     border-top: 1px solid var(--border-color);
     text-align: center;
+    background-color: transparent; /* Ensure the background is transparent */
+}
+
+#explore-more:hover {
+    background-color: transparent; /* Ensure no background change on hover */
 }
 
 #explore-more h2 {
@@ -432,11 +437,17 @@ footer {
     font-weight: 500;
     font-size: 1rem;
     transition: color 0.3s ease;
-    margin-top: 1rem;
+    margin: 0 1rem; /* Add some horizontal margin */
+    padding: 0.5rem 0; /* Add some vertical padding for larger click area */
+    background-color: transparent; /* Ensure transparent background */
 }
 
-.modern-link:hover {
-    color: var(--text-primary);
+.modern-link:focus,
+.modern-link:hover,
+.modern-link:active {
+    outline: none;
+    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .modern-link .arrow {
