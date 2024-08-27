@@ -195,7 +195,6 @@ ul li::before {
     background-color: var(--hover-bg); /* Add background color on hover */
 }
 
-
 .project-card h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
@@ -329,6 +328,30 @@ footer {
     fill: currentColor;
 }
 
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category h3 {
+    margin-bottom: 0.5rem;
+}
+
+.skill-category ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.certifications-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.certifications-list li {
+    margin-bottom: 0.5rem;
+}
+
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
@@ -339,4 +362,88 @@ footer {
     .footer-nav, .footer-social {
         justify-content: center;
     }
+}
+
+/* Style for the button links */
+.button-link {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #2ca8e0; /* Slightly darker shade of the accent color */
+    transform: translateY(-2px);
+}
+
+/* Style for the Explore More section */
+#explore-more {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+#explore-more h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#explore-more p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.explore-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.explore-links .modern-link {
+    font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .explore-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .button-link {
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+    }
+}
+
+.modern-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.modern-link:hover {
+    color: var(--text-primary);
+}
+
+.modern-link .arrow {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.modern-link:hover .arrow {
+    transform: translateX(5px);
 }
