@@ -440,4 +440,52 @@ footer {
     color: #2ca8e0; /* Slightly darker shade of the accent color */
 }
 
+/* More About Me section styles */
+#more-about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.profile-image-placeholder {
+    width: 200px;
+    height: 200px;
+    background-color: var(--hover-bg);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image-placeholder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#more-about-me h2 {
+    margin-bottom: 2rem;
+}
+
+.about-me-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-me-content p {
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .profile-image-placeholder {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-me-content {
+        padding: 0 1rem;
+    }
+}
+
 /* Remove the previous .button-link styles if they're not used elsewhere */
