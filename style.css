@@ -34,33 +34,11 @@ body::before {
     pointer-events: none;
 }
 
-/* Style the social media sidebar */
-.social-sidebar {
-    position: fixed;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    z-index: 1000;
-}
-
-.social-link {
-    display: block;
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
-}
-
-.social-link:hover { transform: scale(1.1); }
-
-/* Style the main content container */
+/* Update the container style */
 .container {
-    max-width: 1000px;
+    max-width: 1000px; /* Reduced from 1200px */
     margin: 0 auto;
-    padding: 2rem;
-    padding-left: calc(2rem + 60px);
+    padding: 0 4rem; /* Increased from 2rem */
 }
 
 /* Style the header */
@@ -100,13 +78,19 @@ h1 {
     font-size: 1.5rem;
 }
 
-/* Existing navbar styles */
+/* Navbar styles */
 nav {
-    display: block;
+    margin-top: 2rem;
+}
+
+nav ul,
+nav ul li {
+    list-style: none !important;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul {
-    list-style-type: none;
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -119,11 +103,27 @@ nav a {
     transition: color 0.3s ease, background-color 0.3s ease;
     font-size: 1.2rem;
     border-radius: 4px;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--accent);
+    transition: width 0.3s ease, left 0.3s ease;
 }
 
 nav a:hover {
     color: var(--accent);
-    background-color: var(--hover-bg);
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 /* Mobile styles */
@@ -146,6 +146,10 @@ nav a:hover {
 
     .subtitle {
         font-size: 1rem;
+    }
+
+    .container {
+        padding: 0 1.5rem; /* Slightly increased for phones */
     }
 }
 
@@ -561,15 +565,6 @@ footer {
         padding: 0.5rem;
     }
 
-    /* Adjust social sidebar */
-    .social-sidebar {
-        position: static;
-        flex-direction: row;
-        justify-content: center;
-        margin-bottom: 2rem;
-        transform: none;
-    }
-
     /* Adjust project card layout */
     .project-content {
         flex-direction: column;
@@ -882,4 +877,106 @@ footer {
     }
 }
 
-/* Remove the previous .button-link styles if they're not used elsewhere */
+/* Add these new styles for the header social icons */
+.header-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.header-social a {
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+.header-social a:hover {
+    color: var(--accent);
+}
+
+.header-social svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+/* Update header styles if needed */
+header {
+    margin-bottom: 4rem;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+/* Existing styles for h1 and subtitle... */
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    /* Existing mobile styles... */
+
+    .header-social {
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Navbar styles */
+nav {
+    margin-top: 2rem;
+}
+
+nav ul,
+nav ul li {
+    list-style: none !important;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--accent);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+}
