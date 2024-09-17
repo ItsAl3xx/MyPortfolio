@@ -70,6 +70,24 @@ header {
     padding: 3rem 0;
 }
 
+/* Add these styles for mobile header */
+@media (max-width: 768px) {
+    header {
+        margin-bottom: 2rem;
+        padding: 2rem 0 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
 h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
@@ -82,7 +100,11 @@ h1 {
     font-size: 1.5rem;
 }
 
-/* Style the navigation */
+/* Existing navbar styles */
+nav {
+    display: block;
+}
+
 nav ul {
     list-style-type: none;
     display: flex;
@@ -102,6 +124,29 @@ nav a {
 nav a:hover {
     color: var(--accent);
     background-color: var(--hover-bg);
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    /* Hide the entire nav element on mobile */
+    nav {
+        display: none;
+    }
+
+    /* Adjust header padding for mobile */
+    header {
+        padding-top: 1rem;
+    }
+
+    /* Adjust h1 and subtitle for mobile */
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
 }
 
 /* Style sections */
@@ -245,6 +290,355 @@ ul li::before {
     font-size: 1rem;
     margin-bottom: 1rem;
     color: var(--text-secondary);
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-tag {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Footer styles */
+footer {
+    background: transparent; /* Remove the gradient background */
+    color: var(--text-secondary);
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.footer-info p:first-child {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--accent);
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social a {
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--accent);
+}
+
+.footer-social svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+/* Style for the button links */
+.button-link {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #2ca8e0; /* Slightly darker shade of the accent color */
+    transform: translateY(-2px);
+}
+
+/* Style for the Explore More section */
+#explore-more {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    background-color: transparent; /* Ensure the background is transparent */
+}
+
+#explore-more:hover {
+    background-color: transparent; /* Ensure no background change on hover */
+}
+
+#explore-more h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#explore-more p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.explore-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.explore-links .modern-link {
+    font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .explore-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .button-link {
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+    }
+}
+
+.modern-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    margin: 0 1rem; /* Add some horizontal margin */
+    padding: 0.5rem 0; /* Add some vertical padding for larger click area */
+    background-color: transparent; /* Ensure transparent background */
+}
+
+.modern-link:focus,
+.modern-link:hover,
+.modern-link:active {
+    outline: none;
+    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.modern-link .arrow {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.modern-link:hover .arrow {
+    transform: translateX(5px);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.view-more {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.view-more:hover {
+    color: #2ca8e0; /* Slightly darker shade of the accent color */
+}
+
+/* More About Me section styles */
+#more-about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.profile-image-placeholder {
+    width: 200px;
+    height: 200px;
+    background-color: var(--hover-bg);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image-placeholder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#more-about-me h2 {
+    margin-bottom: 2rem;
+}
+
+.about-me-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-me-content p {
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .profile-image-placeholder {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-me-content {
+        padding: 0 1rem;
+    }
+}
+
+/* Add these media queries at the end of your CSS file */
+
+@media (max-width: 768px) {
+    /* Adjust container padding */
+    .container {
+        padding: 1rem;
+    }
+
+    /* Adjust header styles */
+    h1 {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    /* Adjust navigation */
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav a {
+        display: block;
+        padding: 0.5rem;
+    }
+
+    /* Adjust social sidebar */
+    .social-sidebar {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 2rem;
+        transform: none;
+    }
+
+    /* Adjust project card layout */
+    .project-content {
+        flex-direction: column;
+    }
+
+    .project-image {
+        flex: 0 0 auto;
+        margin-bottom: 1rem;
+    }
+
+    /* Adjust footer layout */
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .footer-nav, .footer-social {
+        justify-content: center;
+    }
+
+    /* Adjust section padding */
+    section {
+        padding: 0.5rem;
+    }
+
+    /* Adjust explore links */
+    .explore-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modern-link {
+        margin: 0.5rem 0;
+    }
+
+    /* Adjust profile image placeholder */
+    .profile-image-placeholder {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Adjust about me content padding */
+    .about-me-content {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.4rem;
+    }
 }
 
 .project-tags {
