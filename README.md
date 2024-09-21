@@ -8,4 +8,4 @@ will be adding projects as i am building them.
 
 this portfolio is going to be up to date 
 
-finally added a downloadable resume 
+finally added a downloadable resume thats updated
