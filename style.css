@@ -687,3 +687,21 @@ nav a:hover::after {
         font-size: 1rem;
     }
 }
+
+.wip-tag {
+    background-color: #ffd700;
+    color: #333;
+    font-size: 0.8em;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.project-card ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.project-card ul li {
+    margin-bottom: 5px;
+}
