@@ -709,3 +709,13 @@ nav a:hover::after {
 .project-card ul li {
     margin-bottom: 5px;
 }
+
+/* Add these styles where your other nav styles are */
+nav a.active {
+    color: var(--accent);
+}
+
+nav a.active::after {
+    width: 100%;
+    left: 0;
+}
