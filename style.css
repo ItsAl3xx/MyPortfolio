@@ -198,7 +198,8 @@ ul {
     margin-bottom: 1rem;
 }
 
-ul li::before {
+/* Add specific styling for non-nav lists */
+section ul li::before {
     content: '•';
     color: var(--accent);
     display: inline-block;
