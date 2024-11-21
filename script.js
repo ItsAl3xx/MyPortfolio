@@ -11,34 +11,54 @@ function createStickyHeader() {
     }
 
     function updateActiveSection() {
+        // Only proceed if we're on mobile
+        if (window.innerWidth > 480) return;
+
         const sections = document.querySelectorAll('section');
         const scrollPosition = window.scrollY;
+        const scrollThreshold = 50; // Distance from top to trigger header changes
 
+        // Reset sticky header if we're at the very top of the page
+        if (scrollPosition <= scrollThreshold) {
+            stickyHeader.classList.remove('visible');
+            document.querySelectorAll('section h2').forEach(header => {
+                header.classList.remove('hidden');
+            });
+            return;
+        }
+
+        let activeSection = null;
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
             const sectionHeader = section.querySelector('h2');
             
-            if (scrollPosition >= sectionTop - 50 && 
-                scrollPosition < sectionTop + sectionHeight) {
-                
-                if (window.innerWidth <= 480) {
-                    // Get section title and update sticky header
-                    const sectionTitle = sectionHeader.textContent;
-                    stickyHeader.querySelector('h2').textContent = sectionTitle;
-                    
-                    // Show sticky header only when section header is about to be scrolled out
-                    const headerPosition = sectionHeader.getBoundingClientRect().top;
-                    if (headerPosition < 50) {
-                        stickyHeader.classList.add('visible');
-                        sectionHeader.classList.add('hidden');
-                    } else {
-                        stickyHeader.classList.remove('visible');
-                        sectionHeader.classList.remove('hidden');
-                    }
-                }
+            if (scrollPosition >= sectionTop - scrollThreshold && 
+                scrollPosition < sectionTop + sectionHeight - scrollThreshold) {
+                activeSection = section;
             }
         });
+
+        // Update sticky header based on active section
+        if (activeSection) {
+            const sectionHeader = activeSection.querySelector('h2');
+            const headerPosition = sectionHeader.getBoundingClientRect().top;
+            
+            if (headerPosition < scrollThreshold) {
+                stickyHeader.querySelector('h2').textContent = sectionHeader.textContent;
+                stickyHeader.classList.add('visible');
+                sectionHeader.classList.add('hidden');
+            } else {
+                stickyHeader.classList.remove('visible');
+                sectionHeader.classList.remove('hidden');
+            }
+        } else {
+            // No active section found, hide sticky header
+            stickyHeader.classList.remove('visible');
+            document.querySelectorAll('section h2').forEach(header => {
+                header.classList.remove('hidden');
+            });
+        }
     }
 
     // Add scroll event listener with throttling
