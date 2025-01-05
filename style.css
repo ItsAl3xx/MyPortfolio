@@ -993,3 +993,63 @@ section h2.hidden {
         font-size: 0.9rem;
     }
 }
+
+/* Updated project tabs styling */
+.project-tabs {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.tab-button {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.tab-button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: all 0.2s ease;
+    transform: translateX(-50%);
+}
+
+.tab-button:hover {
+    color: var(--text-primary);
+}
+
+
+.tab-button.active::after {
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .project-tabs {
+        width: 100%;
+    }
+
+    .tab-button {
+        flex: 1;
+        text-align: center;
+        white-space: nowrap;
+        font-size: 0.9rem;
+    }
+}
