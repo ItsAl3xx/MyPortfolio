@@ -777,7 +777,7 @@ nav a::after {
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: -2px; /* Change this from 0 to -2px */
+    bottom: -2px;
     left: 50%;
     background-color: var(--accent);
     transition: width 0.3s ease, left 0.3s ease;
@@ -937,4 +937,59 @@ section h2.hidden {
 /* Optional: Add subtle zoom effect on hover */
 .project-card:hover .project-image img {
     transform: scale(1.02);
+}
+
+/* Project tabs styling */
+.project-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tab-button {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--text-primary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    background: rgba(56, 189, 248, 0.1);
+}
+
+.tab-button.active {
+    background: var(--accent);
+    color: var(--bg-primary);
+}
+
+/* Projects grid visibility */
+.projects-grid {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.projects-grid.active {
+    display: grid;
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-tabs {
+        flex-direction: row;
+        padding: 0 1rem;
+    }
+    
+    .tab-button {
+        flex: 1;
+        text-align: center;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
 }

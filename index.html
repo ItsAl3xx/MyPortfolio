@@ -130,54 +130,88 @@
             <!-- Projects section: Showcases developer's projects -->
             <section id="projects">
                 <h2>Projects ⚙️</h2>
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <h3>Cleaning Services Web App <span class="wip-tag">In Development</span></h3>
-                        <div class="project-content">
-                            <div class="project-image">
-                                <img src="images/Homepage Cleaning Website Preview.png" alt="Cleaning Business Website Mockup">
-                            </div>
-                            <div class="project-details">
-                                <p class="project-year">2024</p>
-                                <p>Developing a modern web application using React.js and Supabase to streamline the process of requesting and managing professional cleaning services. This project combines technical expertise with practical business solutions.</p>
-                                <p><strong>Key Features:</strong></p>
-                                <ul>
-                                    <li>Interactive quote request system</li>
-                                    <li>Consultation scheduling platform</li>
-                                    <li>Service area visualization using React-Leaflet</li>
-                                    <li>Dynamic pricing guides</li>
-                                    <li>Responsive service showcase</li>
-                                </ul>
-                                <div class="project-tags">
-                                    <span class="project-tag">React.js</span>
-                                    <span class="project-tag">Supabase</span>
+                <div class="project-tabs">
+                    <button class="tab-button active" data-tab="web-dev">Web Development</button>
+                    <button class="tab-button" data-tab="it">IT Projects</button>
+                </div>
+                
+                <div class="projects-container">
+                    <!-- Web Development Projects -->
+                    <div class="projects-grid active" id="web-dev-projects">
+                        <article class="project-card">
+                            <h3>Cleaning Services Web App <span class="wip-tag">In Development</span></h3>
+                            <div class="project-content">
+                                <div class="project-image">
+                                    <img src="images/Homepage Cleaning Website Preview.png" alt="Cleaning Business Website Mockup">
+                                </div>
+                                <div class="project-details">
+                                    <p class="project-year">2024</p>
+                                    <p>Developing a modern web application using React.js and Supabase to streamline the process of requesting and managing professional cleaning services. This project combines technical expertise with practical business solutions.</p>
+                                    <p><strong>Key Features:</strong></p>
+                                    <ul>
+                                        <li>Interactive quote request system</li>
+                                        <li>Consultation scheduling platform</li>
+                                        <li>Service area visualization using React-Leaflet</li>
+                                        <li>Dynamic pricing guides</li>
+                                        <li>Responsive service showcase</li>
+                                    </ul>
+                                    <div class="project-tags">
+                                        <span class="project-tag">React.js</span>
+                                        <span class="project-tag">Supabase</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card">
-                        <h3>Squirtlepedia <a href="https://squirtlepedia.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link">↗</a></h3>
-                        <div class="project-content">
-                            <div class="project-image">
-                                <img src="images/squirtlepedia-preview.png" alt="Squirtlepedia Preview">
-                            </div>
-                            <div class="project-details">
-                                <p class="project-year">2023</p>
-                                <p>This is one of my first FrontEnd coding boot camp projects that I did. 
-                                    A React-based Pokémon information app using PokeAPI v2. Features include a 3-page layout with React Router, 10+ custom components, and CRUD operations via a Favorites system. 
-                                    Showcases API integration, responsive design with React Bootstrap, and efficient state management. Users can search, view details, and manage favorite Pokémon.
-                                </p>
-                                <div class="project-tags">
-                                    <span class="project-tag">React</span>
-                                    <span class="project-tag">React Router</span>
-                                    <span class="project-tag">React Bootstrap</span>
-                                    <span class="project-tag">JavaScript</span>
-                                    <span class="project-tag">PokeAPIv2</span>
+                        </article>
+                        
+                        <article class="project-card">
+                            <h3>Squirtlepedia <a href="https://squirtlepedia.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link">↗</a></h3>
+                            <div class="project-content">
+                                <div class="project-image">
+                                    <img src="images/squirtlepedia-preview.png" alt="Squirtlepedia Preview">
+                                </div>
+                                <div class="project-details">
+                                    <p class="project-year">2023</p>
+                                    <p>This is one of my first FrontEnd coding boot camp projects that I did. 
+                                        A React-based Pokémon information app using PokeAPI v2. Features include a 3-page layout with React Router, 10+ custom components, and CRUD operations via a Favorites system. 
+                                        Showcases API integration, responsive design with React Bootstrap, and efficient state management. Users can search, view details, and manage favorite Pokémon.
+                                    </p>
+                                    <div class="project-tags">
+                                        <span class="project-tag">React</span>
+                                        <span class="project-tag">React Router</span>
+                                        <span class="project-tag">React Bootstrap</span>
+                                        <span class="project-tag">JavaScript</span>
+                                        <span class="project-tag">PokeAPIv2</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </div>
+
+                    <!-- IT Projects -->
+                    <div class="projects-grid" id="it-projects">
+                        <article class="project-card">
+                            <h3>Home Lab Setup <span class="wip-tag">Planning</span></h3>
+                            <div class="project-content">
+                                <div class="project-details">
+                                    <p class="project-year">2024</p>
+                                    <p>Planning to build a comprehensive home lab environment for learning and testing various IT infrastructure components.</p>
+                                    <p><strong>Planned Features:</strong></p>
+                                    <ul>
+                                        <li>Virtual machine environment</li>
+                                        <li>Network security testing</li>
+                                        <li>Server management</li>
+                                        <li>Backup solutions</li>
+                                    </ul>
+                                    <div class="project-tags">
+                                        <span class="project-tag">VMware</span>
+                                        <span class="project-tag">Networking</span>
+                                        <span class="project-tag">Security</span>
+                                        <span class="project-tag">Server Admin</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </section>
 

@@ -89,3 +89,21 @@ function createStickyHeader() {
 
 // Initialize sticky header functionality
 createStickyHeader();
+
+document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const projectGrids = document.querySelectorAll('.projects-grid');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons and grids
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            projectGrids.forEach(grid => grid.classList.remove('active'));
+
+            // Add active class to clicked button and corresponding grid
+            button.classList.add('active');
+            const tabId = button.getAttribute('data-tab');
+            document.getElementById(`${tabId}-projects`).classList.add('active');
+        });
+    });
+});
