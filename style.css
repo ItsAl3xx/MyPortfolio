@@ -1053,3 +1053,23 @@ section h2.hidden {
         font-size: 0.9rem;
     }
 }
+
+/* Update WIP tag for mobile */
+@media (max-width: 480px) {
+    .wip-tag {
+        font-size: 0.7em;
+        padding: 1px 4px;
+        margin-left: 5px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .project-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+}
