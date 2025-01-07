@@ -1,7 +1,12 @@
 <!DOCTYPE html5>
 <html lang="en">
 <head>
-    <!-- Meta tags for character encoding, viewport, and description -->
+    <!-- Meta Tags Section:
+         - UTF-8: Ensures proper character encoding
+         - Viewport: Controls mobile responsive behavior
+         - Description: Used for SEO and search result previews
+         - Apple-specific tags: Optimizes display on iOS devices
+         - Theme color: Sets the color of browser UI elements -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Alex Bravo - Web Developer portfolio showcasing projects and experience in front-end and back-end development.">
@@ -9,7 +14,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#0f1729">
     
-    <!-- Title and favicons -->
+    <!-- Favicon Section:
+         Different sizes and formats for various devices and platforms
+         - ICO: Traditional favicon for older browsers
+         - PNG: Modern favicon format for better quality
+         - Apple Touch Icon: For iOS home screen
+         - Android Chrome: For Android devices -->
     <title>Alex Bravo - Portfolio</title>
     <link rel="icon" type="image/x-icon" sizes="16x16" href="images/favicons/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
@@ -17,7 +27,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-chrome-192x192.png">
     
-    <!-- Stylesheet link -->
+    <!-- External Resources:
+         - CSS: Links to main stylesheet
+         - Google Analytics: Tracks website traffic and user behavior -->
     <link rel="stylesheet" href="style.css">
 
     <!-- Google tag (gtag.js) -->
@@ -32,7 +44,10 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header section: Contains name, title, social links, and navigation -->
+        <!-- Header Section:
+             - Contains main title and navigation
+             - Social media links with SVG icons
+             - Navigation menu for single-page scrolling -->
         <header>
             <h1>Alex Bravo</h1>
             <p class="subtitle">Web Developer 👨‍💻</p>
@@ -53,8 +68,13 @@
             </nav>
         </header>
         
+        <!-- Main Content Section -->
         <main>
-            <!-- About section: Introduces the developer and their interests -->
+            <!-- About Section:
+                 - Personal introduction
+                 - Highlighted skills and interests
+                 - Uses span.highlight for emphasized text
+                 - Links to detailed about page -->
             <section id="about">
                 <h2>About Me 👤</h2>
                 <div class="about-content">
@@ -76,7 +96,11 @@
                 <a href="more-about-me.html" class="modern-link">More About Me <span class="arrow">→</span></a>
             </section>
             
-            <!-- Experience section: Displays work history and skills -->
+            <!-- Experience Section:
+                 - Work history with detailed responsibilities
+                 - Each job is an article element
+                 - Includes tech tags for skills
+                 - Links to resume PDF -->
             <section id="experience">
                 <div class="section-header">
                     <h2>Experience 💼</h2>
@@ -127,7 +151,11 @@
                 </article>
             </section>
             
-            <!-- Projects section: Showcases developer's projects -->
+            <!-- Projects Section:
+                 - Tab-based navigation between Web Dev and IT projects
+                 - Project cards with images and descriptions
+                 - Tags for technologies used
+                 - WIP tags for ongoing projects -->
             <section id="projects">
                 <div class="section-header">
                     <h2>Projects ⚙️</h2>
@@ -244,7 +272,10 @@
                 </div>
             </section>
 
-            <!-- Explore More section: Links to additional resources -->
+            <!-- Explore More Section:
+                 - Additional navigation options
+                 - Links to resume and detailed about page
+                 - Modern arrow-style links -->
             <section id="explore-more">
                 <h2>Explore More</h2>
                 <p>Discover additional resources and information</p>
@@ -258,7 +289,11 @@
             </section>
         </main>
 
-        <!-- Footer section: Copyright info, navigation links, and social icons -->
+        <!-- Footer Section:
+             - Copyright information
+             - Secondary navigation
+             - Social media links with SVG icons
+             - Matches header styling for consistency -->
         <footer>
             <div class="footer-content">
                 <div class="footer-info">
@@ -281,7 +316,10 @@
             </div>
         </footer>
     </div>
-    <!-- JavaScript file link -->
+
+    <!-- JavaScript:
+         - Loaded at end of body for better performance
+         - Handles interactive elements like project tabs -->
     <script src="script.js"></script>
 </body>
 </html>
