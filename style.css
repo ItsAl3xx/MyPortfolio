@@ -101,6 +101,15 @@ h3 {
 
 p { margin-bottom: 1rem; }
 
+/* Highlight Styling
+   - Makes important text stand out
+   - Uses primary text color (white)
+   - Optional subtle transition effect */
+.highlight {
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
 /* Navigation Menu
    - Horizontal layout with flexbox
    - Hover effects with underline animation
