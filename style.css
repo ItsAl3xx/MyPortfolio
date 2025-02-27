@@ -723,7 +723,9 @@ header {
 
 /* Mobile styles */
 @media (max-width: 480px) {
-    /* Existing mobile styles... */
+    nav {
+        display: none; /* Hide the entire nav element on mobile */
+    }
 
     .header-social {
         margin-top: 0.5rem;
@@ -1588,5 +1590,27 @@ section h2.hidden {
         align-items: center;
         flex-wrap: wrap;
         gap: 5px;
+    }
+}
+
+/* Update subtitle styles */
+.subtitle {
+    color: var(--text-secondary); /* Less bright white */
+    font-size: 1.2rem; /* Smaller font size */
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Mobile styles for subtitle */
+@media (max-width: 480px) {
+    .subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+        flex-direction: column; /* Stack items vertically */
+        gap: 0.25rem; /* Reduce gap between stacked items */
     }
 }
