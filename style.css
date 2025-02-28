@@ -107,7 +107,13 @@ p { margin-bottom: 1rem; }
    - Optional subtle transition effect */
 .highlight {
     color: var(--text-primary);
+    font-weight: 600;
     transition: color 0.3s ease;
+}
+
+/* Remove any existing strong tag styling within highlights */
+.highlight strong {
+    font-weight: 600;
 }
 
 /* Navigation Menu
