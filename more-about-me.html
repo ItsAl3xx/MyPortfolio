@@ -10,6 +10,171 @@
     <!-- Link to external stylesheet and favicon -->
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Page-specific styles that won't affect the homepage -->
+    <style>
+      /* About Me Page Styles - Scoped to this page only */
+      .main .header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      
+      .main .header h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .main .header .subtitle {
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+      }
+      
+      .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+      
+      .profile-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid var(--accent);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+      
+      .profile-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      .profile-content {
+        max-width: 700px;
+        font-size: 1.1rem;
+        line-height: 1.7;
+      }
+      
+      .card {
+        background-color: var(--bg-secondary);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+      
+      .card h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        color: var(--text-primary);
+        border-bottom: 2px solid var(--accent);
+        padding-bottom: 0.5rem;
+        display: inline-block;
+      }
+      
+      .hobbies {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+      
+      .hobby {
+        padding: 1.5rem;
+        background-color: rgba(255, 255, 255, 0.03);
+        border-radius: 8px;
+        transition: transform 0.2s ease;
+      }
+      
+      .hobby:hover {
+        transform: translateY(-3px);
+      }
+      
+      .hobby h4 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        color: var(--accent);
+      }
+      
+      .interests {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+      }
+      
+      .interest {
+        padding: 1.5rem;
+        background-color: rgba(255, 255, 255, 0.03);
+        border-radius: 8px;
+      }
+      
+      .interest h4 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: var(--accent);
+        text-align: center;
+      }
+      
+      .interest ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      
+      .interest ul li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        text-align: center;
+      }
+      
+      .interest ul li:last-child {
+        border-bottom: none;
+      }
+      
+      .quote {
+        font-style: italic;
+        font-size: 1.2rem;
+        color: var(--text-primary);
+        margin-top: 1.5rem;
+        padding-left: 1rem;
+        border-left: 3px solid var(--accent);
+      }
+      
+      /* Mobile Responsiveness */
+      @media (min-width: 768px) {
+        .profile {
+          flex-direction: row;
+          text-align: left;
+        }
+      }
+      
+      @media (max-width: 767px) {
+        .main .header h1 {
+          font-size: 2.5rem;
+        }
+        
+        .card {
+          padding: 1.5rem;
+        }
+        
+        .hobbies, .interests {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+        
+        .profile-content {
+          font-size: 1rem;
+        }
+      }
+    </style>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3X3EY39VB5"></script>
@@ -56,7 +221,7 @@
               
               <div class="profile">
                 <div class="profile-image">
-                  <img src="https://via.placeholder.com/192" alt="Profile">
+                  <img src="profile-photo.jpg" alt="Alex Bravo" class="profile-photo">
                 </div>
                 
                 <div class="profile-content">
@@ -72,30 +237,29 @@
                 <h3>My Hobbies</h3>
                 <div class="hobbies">
                   <div class="hobby">
-                    <h4>[Hobby #1]</h4>
+                    <h4>Photography</h4>
                     <p>
-                      [Describe your first hobby, how you got into it, what you enjoy about it, and any achievements or 
-                      memorable experiences related to it. For example: "I've been playing guitar for over 10 years. 
-                      What started as a casual interest turned into a passion. I love playing blues and jazz, and I've 
-                      even performed at a few local venues."]
+                      I've been passionate about photography for years. I love capturing urban landscapes and street scenes,
+                      finding beauty in everyday moments. On weekends, you'll often find me exploring the city with my camera,
+                      looking for that perfect shot that tells a story.
                     </p>
                   </div>
                   
                   <div class="hobby">
-                    <h4>[Hobby #2]</h4>
+                    <h4>Hiking</h4>
                     <p>
-                      [Describe your second hobby in a similar way. For example: "Photography has been my creative outlet 
-                      since college. I'm particularly drawn to street photography and capturing candid moments. On weekends, 
-                      you'll often find me exploring the city with my camera."]
+                      There's something magical about disconnecting from technology and reconnecting with nature.
+                      I try to hit the trails at least twice a month, challenging myself with new routes and enjoying
+                      the peace that comes with being surrounded by wilderness.
                     </p>
                   </div>
                   
                   <div class="hobby">
-                    <h4>[Hobby #3]</h4>
+                    <h4>Gaming</h4>
                     <p>
-                      [Describe your third hobby. For example: "I'm an avid hiker and nature enthusiast. There's something 
-                      magical about disconnecting from technology and reconnecting with nature. My goal is to hike in at 
-                      least 20 national parks."]
+                      When I need to unwind, gaming is my go-to activity. I enjoy both competitive multiplayer games
+                      and immersive single-player experiences. Gaming has been a great way to stay connected with friends,
+                      especially those who live far away.
                     </p>
                   </div>
                 </div>
